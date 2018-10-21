@@ -25,7 +25,7 @@ def word_substituter(tweet)
       $dict[word]
     elsif $dict.has_key?(word[0].upcase+word[1...word.length])
       word[0].upcase+word[1...word.length]
-    end
+    
     else word
     end
     }.join(" ")
