@@ -21,8 +21,11 @@ $dict = {
 
 def word_substituter(tweet)
   tweet.split().map{|word|
-    if $dict.has_key?(word) || $dict.has_key?(word[0].upcase+word[1...word.length])
+    if $dict.has_key?(word) 
       $dict[word]
+    elsif $dict.has_key?(word[0].upcase+word[1...word.length])
+      word[0].upcase+word[1...word.length]
+    end
     else word
     end
     }.join(" ")
