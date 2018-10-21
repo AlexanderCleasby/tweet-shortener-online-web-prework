@@ -22,7 +22,7 @@ $dict = {
 def word_substituter(tweet)
   tweet.split().map{|word|
     if $dict.has_key?(word)
-      return $dict[word]
+      $dict[word]
     end
     return word
 }.join(" ")
