@@ -24,7 +24,7 @@ def word_substituter(tweet)
     if $dict.has_key?(word)
       $dict[word]
     end
-    return word
+    word
 }.join(" ")
 end
 
