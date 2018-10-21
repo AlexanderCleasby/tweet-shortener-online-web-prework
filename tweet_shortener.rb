@@ -6,7 +6,7 @@
 #'you' becomes 'u'
 #"at" becomes "@"
 #"and" becomes "&"
-dict = {
+$dict = {
   "hello"=>"hi",
   "to"=>"2",
   "two"=>"2",
@@ -21,8 +21,8 @@ dict = {
 
 def word_substituter(tweet)
   tweet.split().map{|word|
-    if dict.has_key?(word)
-      dict[word]
+    if $dict.has_key?(word)
+      $dict[word]
     end
   word}.join(" ")
 end
